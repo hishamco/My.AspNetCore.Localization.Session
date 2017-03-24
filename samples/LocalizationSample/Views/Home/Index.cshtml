@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Localization
+
+@{ 
+    var requestCultureFeature = Context.Features.Get<IRequestCultureFeature>();
+    var requestCulture = requestCultureFeature.RequestCulture;
+}
+
+<h2>Localization Session Request Culture Provider</h2>
+
+<b>Current Culture:</b> @requestCulture.Culture.Name
+<br/>
+<b>Current UICulture:</b> @requestCulture.UICulture.Name
